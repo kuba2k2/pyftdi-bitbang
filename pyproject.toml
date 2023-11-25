@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pyftdi-bitbang"
+version = "1.0.0"
+description = "Bit-bang protocol support for PyFtdi"
+authors = ["Kuba Szczodrzyński <kuba@szczodrzynski.pl>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "pyftdibb" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyftdi = "^0.55.0"
+pyspiflash = "^0.6.3"
+pyi2cflash = "^0.2.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+isort = "^5.12.0"
+autoflake8 = "^0.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
