@@ -52,9 +52,9 @@ class TestSpiFlash:
         port = self.spi.get_port(cs=0)
         for _ in range(5):
             if not duplex:
-                flash_id = port.exchange(b"\x9F", readlen=3, duplex=False)
+                flash_id = port.exchange(b"\x9f", readlen=3, duplex=False)
             else:
-                flash_id = port.exchange(b"\x9F", readlen=4, duplex=True)
+                flash_id = port.exchange(b"\x9f", readlen=4, duplex=True)
                 flash_id = flash_id[1:]
             assert flash_id.hex() == self.flash_id.hex(), (
                 "Should be %s" % self.flash_id.hex()
